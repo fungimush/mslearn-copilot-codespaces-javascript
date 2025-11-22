@@ -122,4 +122,58 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: float 3s ease-in-out infinite;
+  filter: grayscale(0%);
+}
+
+img.socialIcon:hover {
+  transform: translateY(-8px) scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 10px 20px rgba(78, 86, 126, 0.4));
+}
+
+img.socialIcon:active {
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* Stagger the floating animation for each icon */
+a:nth-child(1) img.socialIcon {
+  animation-delay: 0s;
+}
+
+a:nth-child(2) img.socialIcon {
+  animation-delay: 0.2s;
+}
+
+a:nth-child(3) img.socialIcon {
+  animation-delay: 0.4s;
+}
+
+a:nth-child(4) img.socialIcon {
+  animation-delay: 0.6s;
+}
+
+a:nth-child(5) img.socialIcon {
+  animation-delay: 0.8s;
+}
+
+a:nth-child(6) img.socialIcon {
+  animation-delay: 1s;
+}
+
+a:nth-child(7) img.socialIcon {
+  animation-delay: 1.2s;
+}
+
+a:nth-child(8) img.socialIcon {
+  animation-delay: 1.4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
